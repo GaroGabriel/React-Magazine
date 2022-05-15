@@ -9,7 +9,12 @@
   align-items: center;
   overflow: hidden;
   cursor: pointer;
+  &:hover {
+    .category__banner{
+      transform: scale(1.05);
+    }
 
+  }
 
   &__banner {
     display: flex;
@@ -21,11 +26,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    transition: transform .3s ease-in-out;
+    transition: transform .5s ease-in-out;
 
-    &:hover {
-      transform: scale(1.05);
-    }
+
   }
 
   &__body {
