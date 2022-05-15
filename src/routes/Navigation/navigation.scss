@@ -1,0 +1,25 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  &__logo {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+  }
+
+  &__svg {
+    width: 100%;
+  }
+
+  &__list {
+
+  }
+
+  &__link {
+
+  }
+}
