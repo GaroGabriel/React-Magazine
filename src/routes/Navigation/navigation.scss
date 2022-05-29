@@ -5,6 +5,7 @@
   width: 100%;
   padding-top: 5px;
   padding-bottom: 5px;
+
   &__logo {
     width: 70px;
     height: 70px;
@@ -20,6 +21,6 @@
   }
 
   &__link {
-
+    margin: 0 15px;
   }
 }
