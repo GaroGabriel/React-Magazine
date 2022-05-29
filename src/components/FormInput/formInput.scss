@@ -1,0 +1,54 @@
+.input {
+  display: block;
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  height: 50px;
+
+  &__label {
+    position: absolute;
+    bottom: 22px;
+    left: 10px;
+    color: #918989;
+    z-index: 1;
+    transition: bottom .1s ease-in-out, color .3s ease-in-out, color .3s ease-in-out;
+
+    &-filed {
+      bottom: 45px;
+      color: #2d2525;
+      font-weight: 600;
+    }
+
+  }
+
+  &__field {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+
+    &:active {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      outline: none;
+
+    }
+
+    &:focus {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      outline: none;
+      background: rgba(215, 215, 215, 0.32);
+    }
+  }
+}
