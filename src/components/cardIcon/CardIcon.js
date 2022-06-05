@@ -4,10 +4,12 @@ import {ReactComponent as ShoppingIcon} from "../../assets/shopping-bag.svg";
 import {CardContext} from "../../contexts/card-context";
 
 const CardIcon = () => {
-    const {setIsCardOpen} = useContext(CardContext)
+    const {setIsCardOpen, cardCount} = useContext(CardContext)
     const toggleIsCardOpen = () => {
         setIsCardOpen(prev => !prev)
     }
+
+
     return (
         <div
             className='cardIcon'
@@ -19,7 +21,7 @@ const CardIcon = () => {
             <span
                 className='cardIcon__count'
             >
-                0
+                {cardCount}
             </span>
         </div>
     );
