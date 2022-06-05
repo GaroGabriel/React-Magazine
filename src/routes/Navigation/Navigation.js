@@ -8,6 +8,7 @@ import CardIcon from "../../components/cardIcon/CardIcon";
 import CardDropDown from "../../components/cardDropDown/CardDropDown";
 import {CardContext} from "../../contexts/card-context";
 
+
 const Navigation = () => {
     const {currentUser} = useContext(UserContext)
 const {isCardOpen} = useContext(CardContext)
