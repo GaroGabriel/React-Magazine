@@ -8,7 +8,8 @@ import {
 } from '../../routes/utils/firebase/firebase'
 import FormInput from "../FormInput/FormInput";
 import Button from "../Button/Button";
-import {logDOM} from "@testing-library/react";
+
+
 
 const defaultFormFields = {
     email: '',
@@ -18,36 +19,37 @@ const defaultFormFields = {
 const SignInForm = () => {
     const [formFields, setFormFields] = useState(defaultFormFields)
     const {email, password} = formFields;
+
+
     const resetFormFilds = () => {
         setFormFields(defaultFormFields)
     }
     const signInWithGoogle = async () => {
-        const {user} = await signInWithGooglePopup()
-        await createUserDocumentFromAuth(user)
+        await signInWithGooglePopup()
 
     }
 
     const handleSubmit = async (event) => {
         event.preventDefault()
         try {
-const response = await signInAuthUserWithEmailAndPassword(email,password)
-            console.log(response)
+            const {user} = await signInAuthUserWithEmailAndPassword(email, password)
+
             resetFormFilds()
 
         } catch (error) {
-            switch (error.code){
+            switch (error.code) {
                 case 'auth/wrong-password':
-                     alert('incorrect password for e-mail');
-                     break
+                    alert('incorrect password for e-mail');
+                    break
                 case 'auth/user-not-found':
                     alert('no user associated with this email');
                     break
                 default:
                     console.log(error);
             }
-            if(error.code === 'auth/wrong-password'){
+            if (error.code === 'auth/wrong-password') {
                 alert('incorrect password for e-mail');
-            }else if(error.code === 'auth/user-not-found'){
+            } else if (error.code === 'auth/user-not-found') {
                 alert('incorrect password for e-mail');
             }
         }

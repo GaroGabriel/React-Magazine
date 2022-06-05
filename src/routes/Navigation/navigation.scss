@@ -17,10 +17,12 @@
   }
 
   &__list {
-
+    display: flex;
+    align-items: center;
   }
 
   &__link {
     margin: 0 15px;
+    cursor: pointer;
   }
 }
