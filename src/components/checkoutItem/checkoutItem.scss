@@ -1,0 +1,30 @@
+.checkoutItem{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #b2b0b0;
+  padding: 10px 0;
+  &__imgContainer,
+  &__name,
+  &__quantityWrapper,
+  &__price,
+  &__removeBtnWrapper{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__img{
+    width: 100%;
+  }
+  &__quantity{
+    padding: 0 10px;
+  }
+  &__removeBtn{
+    cursor: pointer;
+  }
+  &__arrow{
+    cursor: pointer;
+    user-select: none;
+  }
+}
