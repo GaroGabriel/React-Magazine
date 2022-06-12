@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import './checkout.scss'
 import {CardContext} from "../../contexts/card-context";
 import CheckoutItem from "../../components/checkoutItem/CheckoutItem";
+import {useParams} from "react-router-dom";
 
 const checkoutItems = ['Product','Description', 'Quantity','Price','Remove']
 
