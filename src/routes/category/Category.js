@@ -5,27 +5,31 @@ import ProductCard from "../../components/ProductCard/ProductCard";
 import './category.scss'
 
 
-
 const Category = () => {
     const {category} = useParams()
     const {categoriesMap} = useContext(CategoriesContext)
     const [products, setProducts] = useState(categoriesMap[category])
 
 
-    useEffect(()=>{
+    useEffect(() => {
         setProducts(categoriesMap[category])
-    },[category,categoriesMap])
+    }, [category, categoriesMap])
     return (
-        <div className='categoryWrapper container'>
-            {
-                products && products.map((product)=>{
-                    return(
-                        <ProductCard
-                            key={product.id}
-                            product={product}/>
-                    )
-                })
-            }
+        <div className='container'>
+            <h2 className='categoryWrapper__title'>{category}</h2>
+
+            <div className='categoryWrapper container'>
+
+                {
+                    products && products.map((product) => {
+                        return (
+                            <ProductCard
+                                key={product.id}
+                                product={product}/>
+                        )
+                    })
+                }
+            </div>
         </div>
     );
 };
